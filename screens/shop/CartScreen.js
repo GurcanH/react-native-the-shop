@@ -52,7 +52,7 @@ const CartScreen = props => {
 
 const styles = StyleSheet.create({
   screen: {
-    margin: 20
+    margin: 0
   },
   summary: {
     flexDirection: 'row',

@@ -12,7 +12,7 @@ const CartItem = props => {
   return (
     <View style={styles.cartItem}>
       <View style={styles.itemData}>
-        <Text style={styles.quantity}>{props.quantity}</Text>
+        <Text style={styles.quantity}>{props.quantity} </Text>
         <Text style={styles.mainText}>{props.title}</Text>
       </View>
       <View style={styles.itemData}>
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginHorizontal: 20
   },
-  titleitemData: {
+  itemData: {
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
     fontFamily: 'open-sans-bold',
     fontSize: 16
   },
-
   deleteButton: {
     marginLeft: 20
   }
