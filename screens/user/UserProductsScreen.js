@@ -13,7 +13,7 @@ const UserProductsSreen = props => {
   const dispatch = useDispatch();
 
   const editProductHandler = item => {
-    props.navigation.navigate('EditProduct', { productId: item });
+    props.navigation.navigate('EditProduct', { product: item });
   };
 
   return (
