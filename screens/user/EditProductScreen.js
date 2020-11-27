@@ -114,7 +114,6 @@ const EditProductScreen = props => {
 
   const inputChangeHandler = useCallback(
     (inputIdentifier, inputValue, inputValidity) => {
-      console.log(inputIdentifier, inputValue);
       dispatchFormState({
         type: FORM_INPUT_UPDATE,
         value: inputValue,
