@@ -36,8 +36,19 @@ const ProductsOverviewScreen = props => {
   }, [dispatch, setIsLoading, setError]);
 
   useEffect(() => {
-    loadProducts();
-  }, [dispatch, loadProducts]);
+    const willFocusSub = props.navigation.addListener(
+      'willFocus',
+      loadProducts
+    );
+
+    return () => {
+      willFocusSub.remove();
+    };
+  }, [loadProducts]);
+
+  // useEffect(() => {
+  //   loadProducts();
+  // }, [dispatch, loadProducts]);
 
   const selectItemHandler = item => {
     props.navigation.navigate('ProductDetail', {
@@ -46,7 +57,6 @@ const ProductsOverviewScreen = props => {
   };
 
   if (error) {
-    console.log(error);
     return (
       <View style={styles.centered}>
         <Text>An error ocurred!</Text>
