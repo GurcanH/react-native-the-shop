@@ -45,7 +45,7 @@ const EditProductScreen = props => {
   const [isLoading, setIsloading] = useState(false);
   const [error, setError] = useState();
 
-  const editedProduct = props.navigation.getParam('product');
+  const editedProduct = props.route.params ? props.route.params.product : null;
 
   const dispatch = useDispatch();
 
@@ -198,11 +198,10 @@ const EditProductScreen = props => {
 };
 
 export const screenOptions = navData => {
-  const submitFn = navData.navigation.getParam('submit');
+  const submitFn = navData.route.params ? navData.route.params.submit : null;
+  const routeParams = navData.route.params ? navData.route.params : {};
   return {
-    headerTitle: navData.navigation.getParam('product')
-      ? 'Edit Product'
-      : 'Add Product',
+    headerTitle: routeParams.product ? 'Edit Product' : 'Add Product',
     headerRight: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
