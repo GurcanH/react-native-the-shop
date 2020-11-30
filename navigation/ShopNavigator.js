@@ -186,7 +186,7 @@ export const ShopNavigator = () => {
         name='Products'
         component={ProductsNavigator}
         options={{
-          drawerIcon: drawerConfig => (
+          drawerIcon: props => (
             <Ionicons
               name={Platform.OS === 'android' ? 'md-cart' : 'ios-cart'}
               size={23}
@@ -199,7 +199,7 @@ export const ShopNavigator = () => {
         name='Orders'
         component={OrdersNavigator}
         options={{
-          drawerIcon: drawerConfig => (
+          drawerIcon: props => (
             <Ionicons
               name={Platform.OS === 'android' ? 'md-list' : 'ios-list'}
               size={23}
@@ -212,7 +212,7 @@ export const ShopNavigator = () => {
         name='Admin'
         component={AdminNavigator}
         options={{
-          drawerIcon: drawerConfig => (
+          drawerIcon: props => (
             <Ionicons
               name={Platform.OS === 'android' ? 'md-create' : 'ios-create'}
               size={23}

@@ -60,7 +60,7 @@ const OrdersScreen = props => {
 
 export const screenOptions = navData => {
   return {
-    headerLeft: (
+    headerLeft: () => (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title='Menu'
